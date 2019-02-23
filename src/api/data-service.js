@@ -19,10 +19,24 @@ export default {
   getMovieGenres(params, success, failure) {
     networkClient.get('genre/movie/list', success, failure, params);
   },
+  getSeriesGenres(params,success,failure){
+    networkClient.get('genre/tv/list',success,failure,params);
+  },
   getFilteredMovies(params, success, failure) {
     networkClient.get('discover/movie', success, failure, params);
   },
   submitRating(id, params, success, failure) {
     networkClient.get(`/movie/${id}/rating`, success, failure, params);
   },
+  getPopularPeople(params, success, failure){
+    networkClient.get('person/popular',success,failure,params);
+  },
+
+  getFilteredSeries(params, success, failure){
+    networkClient.get('discover/tv', success,failure,params);
+  }
+
+  
+
+
 };

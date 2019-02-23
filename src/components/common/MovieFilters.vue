@@ -6,9 +6,11 @@
     <div class="col-sm-4">
         <st-sort-by @sortByChange="sortByChange"></st-sort-by>
     </div>
+   
     <div class="col-sm-4">
-        <st-select-genres @selectGenresChange="selectGenresChange"></st-select-genres>
+      <st-select-genres @selectGenresChange="selectGenresChange"></st-select-genres>
     </div>
+
   </div>
 </template>
 
@@ -17,6 +19,7 @@ import StSelectYear from './SelectYear';
 import StSortBy from './SortBy';
 import actions from '../../store/action-types';
 import StSelectGenres from './SelectGenres';
+
 export default {
   name: 'st-movie-filters',
   data() {

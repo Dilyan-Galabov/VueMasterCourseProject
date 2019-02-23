@@ -40,8 +40,8 @@
     data() {
       return {
         form: {
-          user: '',
-          password: '',
+          user: 'default',
+          password: 'd',
         },
       };
     },
@@ -49,7 +49,7 @@
       onLogin(e) {
         e.preventDefault();
         console.log(JSON.stringify(this.form));
-        this.$router.push({path: 'trending'});
+        this.$router.push({path: 'discover'});
       },
     },
   };

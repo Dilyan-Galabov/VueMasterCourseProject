@@ -9,6 +9,9 @@
           <b-nav-item to="/movies">Филми</b-nav-item>
           <b-nav-item to="/series">Сериали</b-nav-item>
           <b-nav-item to="/favorite">Любими</b-nav-item>
+          <b-nav-item to="/person">Известни личности</b-nav-item>
+          <b-nav-item to="/discoverPeople">Търси известни личности</b-nav-item>
+          <b-nav-item to="/discoverSeries">Търси ТВ Серии</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <st-movie-search></st-movie-search>

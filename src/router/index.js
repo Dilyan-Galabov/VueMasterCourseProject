@@ -8,7 +8,10 @@ import Series from '../components/series/Series';
 import Favorite from '../components/favorite/Favorite';
 import MovieDetails from '../components/moviedetails/MovieDetails';
 import DiscoverMovies from '../components/discover/DiscoverMovies';
+import DiscoverPeople from '../components/discover/DiscoverPeople';
+import DiscoverSeries from '../components/discover/DiscoverSeries';
 import Footer from '../components/footer/Footer';
+import Person from '../components/people/Person';
 
 Vue.use(Router);
 
@@ -27,6 +30,24 @@ export default new Router({
       components: {
         navigation: Navigation,
         default: DiscoverMovies,
+        footer: Footer,
+      },
+    },
+    {
+      path: '/discoverSeries',
+      name: 'DiscoverSeries',
+      components: {
+        navigation: Navigation,
+        default: DiscoverSeries,
+        footer: Footer,
+      },
+    },
+    {
+      path: '/discoverPeople',
+      name: 'DiscoverPeople',
+      components: {
+        navigation: Navigation,
+        default: DiscoverPeople,
         footer: Footer,
       },
     },
@@ -75,5 +96,16 @@ export default new Router({
         footer: Footer,
       },
     },
+
+    {
+      path: '/person',
+      name: 'Person',
+      components: {
+        navigation: Navigation,
+        default: Person,
+        footer: Footer,
+      },
+    },
+
   ],
 });

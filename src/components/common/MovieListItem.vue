@@ -1,4 +1,5 @@
 <template>
+
   <div class="col-md-6">
     <div class="card flex-row mt-3 movie-container">
       <st-movie-image :poster="poster"></st-movie-image>
@@ -17,6 +18,8 @@
       </div>
     </div>
   </div>
+
+  
 </template>
 
 <script>

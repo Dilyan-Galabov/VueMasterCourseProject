@@ -95,6 +95,23 @@ export default {
       },
     );
   },
+  [actions.GET_SERIES_GENRES]({commit}, params = {}) {
+    commit(mutations.SET_LOADER, true);
+    dataService.getSeriesGenres(
+      params,
+      (response) => {
+        commit(mutations.SET_SERIES_GENRES, response.genres);
+        commit(mutations.SET_LOADER, false);
+      },
+      (error) => {
+        console.log(error);
+        commit(mutations.SET_LOADER, false);
+      },
+    );
+  },
+
+
+
   [actions.GET_FILTERED_MOVIES]({commit}, params = {}) {
     commit(mutations.SET_LOADER, true);
     dataService.getFilteredMovies(
@@ -126,4 +143,41 @@ export default {
       },
     );
   },
+  [actions.GET_POPULAR_PEOPLE]({commit}, params = {}) {
+    commit(mutations.SET_LOADER, true);
+    dataService.getPopularPeople(
+      params,
+      (response) => {
+        console.log(response);
+        commit(mutations.SET_LOADER, false);
+        commit(mutations.SET_PEOPLE, response.results)
+        commit(mutations.SET_TOTAL_RESULTS, response.total_results);
+        commit(mutations.SET_CURRENT_PAGE, response.page);
+      },
+      (error) => {
+        console.log(error);
+        commit(mutations.SET_LOADER, false);
+      },
+    );
+  },
+
+  [actions.GET_FILTERED_SERIES]({commit}, params = {}) {
+    commit(mutations.SET_LOADER, true);
+    dataService.getFilteredSeries(
+      params,
+      (response) => {
+        commit(mutations.SET_SERIES, response.results);
+        commit(mutations.SET_TOTAL_RESULTS, response.total_results);
+        commit(mutations.SET_CURRENT_PAGE, response.page);
+        commit(mutations.SET_LOADER, false);
+      },
+      (error) => {
+        console.log(error);
+        commit(mutations.SET_LOADER, false);
+      },
+    );
+  },
+  
+
+ 
 };
