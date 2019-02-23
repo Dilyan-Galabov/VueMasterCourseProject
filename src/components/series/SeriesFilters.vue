@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       filters: {
-        with_genres: 'Crime'
+        with_genres: '80'
       }
     }
   },
@@ -32,16 +32,17 @@ export default {
   },
   methods: {
     sortBy(value){
-      this.changeFilters('sort_by', value);
+            this.changeFilters('sort_by', value);
     },
      selectGenresChange(value){
      this.changeFilters('with_genres', value.toString());
     },
     changeFilters(key, value){
-      this.filters[key] = value;
-      this.getFilteredSeries();
+      this.filters[key] = value;   
+         this.getFilteredSeries();
     },
     getFilteredSeries(){
+      debugger
       this.$store.dispatch(actions.GET_FILTERED_SERIES, this.filters);
     }
   }

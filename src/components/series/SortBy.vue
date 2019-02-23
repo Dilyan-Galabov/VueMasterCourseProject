@@ -22,6 +22,7 @@ export default {
   },
   methods: {
     sortBy(value){
+      console.log(value);
         this.$emit('sortBy', value);
     }
   }

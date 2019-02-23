@@ -166,7 +166,7 @@ export default {
     dataService.getFilteredSeries(
       params,
       (response) => {
-        commit(mutations.SET_SERIES, response.results);
+        commit(mutations.SET_MOVIES, response.results);
         commit(mutations.SET_TOTAL_RESULTS, response.total_results);
         commit(mutations.SET_CURRENT_PAGE, response.page);
         commit(mutations.SET_LOADER, false);
